@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Login & Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .toggle-buttons {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #6c757d;
+            position: relative;
+            z-index: 2;
+        }
+
+        .toggle-btn.active {
+            color: white;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: calc(50% - 4px);
+            height: calc(100% - 8px);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .toggle-slider.signup {
+            transform: translateX(100%);
+        }
+
+        .form-container {
+            position: relative;
+        }
+
+        .form {
+            display: none;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .form.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #adb5bd;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+            z-index: 1;
+        }
+
+        .divider span {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .social-btn:hover {
+            border-color: #667eea;
+            transform: translateY(-1px);
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .forgot-password a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #764ba2;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-size: 14px;
+            color: #6c757d;
+            cursor: pointer;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="showLogin()">Login</button>
+            <button class="toggle-btn" onclick="showSignup()">Sign Up</button>
+            <div class="toggle-slider" id="toggleSlider"></div>
+        </div>
+
+        <div class="form-container">
+            <!-- Login Form -->
+            <div class="form active" id="loginForm">
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                </form>
+                
+                <div class="forgot-password">
+                    <a href="#" onclick="alert('Password reset functionality would be implemented here')">Forgot your password?</a>
+                </div>
+
+                <div class="divider">
+                    <span>or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="social-btn" onclick="socialLogin('google')">Google</button>
+                    <button class="social-btn" onclick="socialLogin('github')">GitHub</button>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form" id="signupForm">
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">I agree to the Terms of Service and Privacy Policy</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Create Account</button>
+                </form>
+
+                <div class="divider">
+                    <span>or sign up with</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="social-btn" onclick="socialLogin('google')">Google</button>
+                    <button class="social-btn" onclick="socialLogin('github')">GitHub</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            document.getElementById('loginForm').classList.add('active');
+            document.getElementById('signupForm').classList.remove('active');
+            document.getElementById('toggleSlider').classList.remove('signup');
+            document.querySelectorAll('.toggle-btn')[0].classList.add('active');
+            document.querySelectorAll('.toggle-btn')[1].classList.remove('active');
+        }
+
+        function showSignup() {
+            document.getElementById('signupForm').classList.add('active');
+            document.getElementById('loginForm').classList.remove('active');
+            document.getElementById('toggleSlider').classList.add('signup');
+            document.querySelectorAll('.toggle-btn')[1].classList.add('active');
+            document.querySelectorAll('.toggle-btn')[0].classList.remove('active');
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Simulate login process
+            if (email && password) {
+                alert(`Welcome back! Login successful for ${email}`);
+                // In a real app, you would send this data to your backend
+            }
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            if (name && email && password) {
+                alert(`Account created successfully for ${name}! Welcome aboard!`);
+                // In a real app, you would send this data to your backend
+            }
+        }
+
+        function socialLogin(provider) {
+            alert(`${provider.charAt(0).toUpperCase() + provider.slice(1)} login would be implemented here`);
+            // In a real app, you would integrate with OAuth providers
+        }
+
+        // Add some interactive effects
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

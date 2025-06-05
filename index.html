@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+	<script src="script.js" defer></script>
+	<title>Chbiba Nachta</title>
+</head>
+<body>
+	<div class="header">
+		<nav>
+		 <img src="images\logo1.png" class="logo"></img>
+		 <div class="nav-links" id="navLinks">
+		   <i class="fa-solid fa-square-xmark" onclick="hidemenu()"></i>
+			<ul>
+			 	<li><a href="#">Home</a></li>
+			 	<li><a href="#course">Courses</a></li>
+			 	<li><a href="#pricing">Our team</a></li>
+			 	<li><a href="form.html">Contact Us</a></li>
+			 	<a href="login.html"><button class="btn">Log in</button></a>
+			 	<i class="ri-user-line nav__login" id="login-btn"></i>
+			</ul>
+		  </div>
+		  <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+		</nav>
+		<div class="text-box">
+			<h1>Chbiba Nachta</h1>
+			<p>Welcome to Chbiba Nachta, your go-to destination for all things related to the vibrant and lively world of Chbiba Nachta.
+			Whether you're looking for the latest courses, events, or just want to immerse yourself in the culture, we've got you covered.</p>
+			<a href="form.html" class="hero-btn">Join us</a>
+		</div>
+ 	</div>
+
+	<!--activities-->
+	
+	<section class="pricing-section">
+        <div class="container">
+            <div class="heade">
+                <p class="heade-subtitle">Our Pricing</p>
+                <h1 class="heade-title">We offer great pricing plans for everyone.</h1>
+                <div class="heade-divider"></div>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="card-body">
+                        <h2 class="plan-name">Starter</h2>
+                        <div class="plan-price">S1/S2</div>
+                        
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>7</strong> Modules</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>+20</strong> TD Sessions</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>+20</strong> Exams</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon cross" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                <span class="feature-text">No <strong>TP Sessions</strong></span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon cross" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                                <span class="feature-text no">No <strong>TP Exams</strong></span>
+                            </li>
+                        </ul>
+                        
+                        <a href="1st_Year.html" class="cta-button">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="card-body">
+                        <h2 class="plan-name">Pro</h2>
+                        <div class="plan-price">S5/S6</div>
+                        
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>7</strong> Modules</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>+50</strong> TD Sessions</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>+40</strong> TP Sessions</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text">Projects in <strong>Java and AI</strong></span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>TP Exams</strong> Included</span>
+                            </li>
+                        </ul>
+                        <a href="" class="cta-button">Choose Pro</a>
+                    </div>
+                </div>
+
+                <!-- Intermediate Plan -->
+                <div class="pricing-card">
+                    <div class="card-body">
+                        <h2 class="plan-name">Intermediate</h2>
+                        <div class="plan-price">S3/S4</div>
+                        
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>7</strong> Modules</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>+30</strong> TD Sessions</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text"><strong>+10</strong> TP Sessions</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text">Access to <strong>Previous Exams</strong></span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="feature-icon check" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg>
+                                <span class="feature-text">Projects in <strong>JS and C++</strong></span>
+                            </li>
+                        </ul>
+                        
+                        <a href="2nd_year.html" class="cta-button">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!--Our team-->
+
+	<section class="py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Meet Our Team</h2>
+                    <p class="text-muted">Dedicated professionals working together to achieve excellence</p>
+                </div>
+            </div>
+
+            <!-- Team Members -->
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member text-center p-4">
+                    <img src="images\wind.jpg" alt="Team Member 1" class="mb-4">
+                    <h5 class="mb-1">Saad Jebbour</h5>
+                    <p class="text-muted mb-3">CEO & Founder</p>
+                    <p class="small mb-3">Leading our company's vision and strategy with over 15 years of experience.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/?locale=fr_FR" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=fr_FR" aria-label="Facebook"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member text-center p-4">
+                    <img src="images\mawmaw.jpg" alt="Team Member 2" class="mb-4">
+                    <h5 class="mb-1">Tounarouz Akdim</h5>
+                    <p class="text-muted mb-3">Tech Lead</p>
+                    <p class="small mb-3">Driving innovation and technical excellence in all our projects.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/?locale=fr_FR" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=fr_FR" aria-label="GitHub"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member text-center p-4">
+                    <img src="images/jin.jpg" alt="Team Member 3" class="mb-4">
+                    <h5 class="mb-1">Said Rzouk</h5>
+                    <p class="text-muted mb-3">Design Director</p>
+                    <p class="small mb-3">Creating beautiful and intuitive designs that users love.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/?locale=fr_FR" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=fr_FR" aria-label="Dribbble"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member text-center p-4">
+                    <img src="images/blue.jpg" alt="Team Member 4" class="mb-4">
+                    <h5 class="mb-1">Soukaina NB~</h5>
+                    <p class="text-muted mb-3">Marketing Manager</p>
+                    <p class="small mb-3">Developing strategies that connect our brand with audiences.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/?locale=fr_FR" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.whatsapp.com/?lang=fr_FR" aria-label="Twitter"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+				<!--Team Member 5 -->
+
+				<div class="team-member text-center p-4">
+                    <img src="images/monster.jpg" alt="Team Member 2" class="mb-4">
+                    <h5 class="mb-1">Mohammed Aichour</h5>
+                    <p class="text-muted mb-3">Tech Lead</p>
+                    <p class="small mb-3">Driving innovation and technical excellence in all our projects.</p>
+                    <div class="social-links">
+                        <a href="https://www.whatsapp.com/?lang=fr_FR" aria-label="LinkedIn"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/?locale=fr_FR" aria-label="GitHub"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+				<!--Team Member 6-->
+
+				<div class="team-member text-center p-4">
+                    <img src="images/breaker.jpg" alt="Team Member 2" class="mb-4">
+                    <h5 class="mb-1">Walid Aymen</h5>
+                    <p class="text-muted mb-3">Tech Lead</p>
+                    <p class="small mb-3">Driving innovation and technical excellence in all our projects.</p>
+                    <div class="social-links">
+                        <a href="https://www.whatsapp.com/?lang=fr_FR" aria-label="LinkedIn"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/?locale=fr_FR" aria-label="GitHub"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!--Contact Us -->
+
+	<section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Address</h4>
+                            <p>123 Business Street<br>City, State 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>contact@company.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer section-->
+
+	<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <!-- Company Info -->
+                <div class="footer-section company-info">
+                    <div class="company-logo">CN</div>
+                    <p>We are dedicated to providing exceptional service and innovative solutions that help our clients achieve their goals. Our team of experts is committed to excellence in everything we do.</p>
+                    <div class="social-media">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#development">Development</a></li>
+                        <li><a href="#seo">SEO Services</a></li>
+                        <li><a href="#marketing">Digital Marketing</a></li>
+                        <li><a href="#consulting">Consulting</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><span class="icon">📍</span>Lafac &nbsp;&nbsp;Agadir , Salam</p>
+                        <p><span class="icon">📞</span>+212 64 46 10 41 3</p>
+                        <p><span class="icon">✉️</span>ChabibaNachta@gmail.com</p>
+                        <p><span class="icon">🌐</span>www.ChabaNachta.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter">
+                <h4>📧 Subscribe to Our Newsletter</h4>
+                <p>Stay updated with our latest news, offers, and insights delivered straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ChabaNachta. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
